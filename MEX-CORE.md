@@ -8,7 +8,7 @@ Markup languages are the ubiquitous baseline for plain-text authoring, but they 
 
 This document defines **Markup Extensions (MEX)**: an additive, version-controlled, adoption-governed formatting layer that sits on top of a base markup language. MEX is a **Layer 2** that never modifies **Layer 1** (the base markup). L1 rules are left completely untouched; MEX only adds new, non-colliding tokens that L1 does not process.
 
-MEX is **base-agnostic**. The base language (L1) is a parameter, not a fixed choice: Markdown today, djot or another lightweight markup tomorrow. MEX-CORE is the genesis and the root of everything. It defines the architecture, the four lineage laws, the governance model, the file format, and the document declaration. It names no base and defines no tokens. Each base is bound by its own profile genesis (for example MEX-0 for Markdown), which descends from this core.
+MEX is **base-agnostic**. The base language (L1) is a parameter, not a fixed choice: Markdown today, djot or another lightweight markup tomorrow. MEX-CORE is the genesis and the root of everything. It defines the architecture, the four lineage laws, the governance model, the file format, and the document declaration. It names no base and defines no tokens. Each base is bound by its own profile genesis (for example MEX-MARKDOWN-0 for Markdown), which descends from this core.
 
 ## Layered model
 - **Layer 1 (L1):** a base markup language. L1 is a parameter, chosen per lineage and fixed by that lineage's base profile. L1 rules are never touched by MEX.
@@ -22,7 +22,7 @@ A base MUST be a **lightweight, human-readable text markup language** (for examp
 ## The Four Lineage Laws
 These govern how an MEX lineage may evolve. "Lineage" means a chain of version files, each descending from a previous one (see Governance and File Format). The laws are base-agnostic; where a law needs a concrete per-base list, that list lives in the base profile, not here.
 
-1. **External Base Lock.** MEX tokens SHALL NOT use any character pattern that the declared **base** already recognizes. The concrete set of forbidden patterns is defined by each base profile (for example the Markdown profile, MEX-0, lists the CommonMark + GFM constructs). Tool-specific ecosystems outside a base's own specification are not part of its lock, because almost every bracket is claimed by *some* tool and a universal lock would be unsatisfiable. Implementers are nonetheless encouraged to avoid gratuitous overlap with popular conventions where a free alternative exists.
+1. **External Base Lock.** MEX tokens SHALL NOT use any character pattern that the declared **base** already recognizes. The concrete set of forbidden patterns is defined by each base profile (for example the Markdown profile, MEX-MARKDOWN-0, lists the CommonMark + GFM constructs). Tool-specific ecosystems outside a base's own specification are not part of its lock, because almost every bracket is claimed by *some* tool and a universal lock would be unsatisfiable. Implementers are nonetheless encouraged to avoid gratuitous overlap with popular conventions where a free alternative exists.
 2. **Internal Version Lock (within a lineage).** Once a symbol or pattern is assigned a meaning in a version, that assignment is immutable in all **later** versions **of the same lineage**. MEX does not patch mistakes in place. A flawed assignment is corrected by **forking a new lineage** that the ecosystem may adopt (see Governance), not by mutating an existing version.
 3. **Structural Namespace Lock (within a lineage).** A delimiter or keyword, once claimed, is never reassigned to a different feature in later versions of the same lineage.
 4. **Cryptographic Lineage (auditable provenance).** Every file beyond a genesis embeds the SHA-256 of its predecessor's signed region and the predecessor author's signature of that hash, and is itself sealed (signed) by its own author (see File Format). The chain forms a tree rooted at MEX-CORE: each base profile genesis descends from CORE, and each version dictionary descends from its base's previous version. This makes every lineage, and every fork point, cryptographically **auditable**. It is explicitly **not** a fork-prevention mechanism (see Governance). Verification is performed **once, on adoption** (when a client decides to support a version), never per rendered document.
@@ -153,6 +153,6 @@ A token's payload is **data, never markup**. A renderer MUST escape payload cont
 <!-- MEX-SIGNED-REGION-END -->
 
 <!-- MEX-SEAL
-file_sha256: d7164cf6abaaa3e72ff85532e0d1ad3e3019bc2394f6c301668dde4ed7930cd5
+file_sha256: 8e504ee05cd1c09cfbd391bde67a761694c63c8f08947f084a2d399bed6b47b5
 signature: PENDING_SIGNATURE
 -->
