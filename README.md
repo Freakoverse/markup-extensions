@@ -13,7 +13,6 @@ The base language is a parameter, not a fixed choice: Markdown today, djot or an
 | [MEX-MARKDOWN-1.md](MEX-MARKDOWN-1.md) | Markdown version-1 token dictionary (underline, spoiler, highlight, timestamp, alignment). Descends from MEX-MARKDOWN-0. |
 | [MEX-MARKDOWN-2.md](MEX-MARKDOWN-2.md) | Markdown version-2: the `{grid}` layout grid. Descends from MEX-MARKDOWN-1. |
 | [mex-hash.mjs](mex-hash.mjs) | Reference canonicalizer / hasher. Computes a file's `file_sha256` over its canonicalized signed region. |
-| [../NIP-MEX.md](../NIP-MEX.md) | Nostr transport binding: how an event advertises its MEX baseline via the `mex` tag. |
 
 Each base profile is named `MEX-<BASE>-N`: the genesis is `-0`, token dictionaries are `-1`, `-2`, and so on. A future base would be added as a sibling lineage, for example `MEX-DJOT-0.md` (binding) and `MEX-DJOT-1.md` (dictionary), also descending from MEX-CORE. Nothing in the core or the Markdown branch changes.
 
