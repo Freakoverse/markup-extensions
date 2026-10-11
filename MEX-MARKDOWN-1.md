@@ -5,7 +5,7 @@ Previous version: 0
 Previous file_sha256: 1c0a6e1102e633401d999c9f52105793cfd8ea01bb967138166ef251e6c7a4f6
 Previous author signature: PENDING_MARKDOWN0_SIGNATURE (the MEX-MARKDOWN-0 author's signature of the hash above)
 
-# MEX-MARKDOWN-1: Markdown Core Feature Dictionary (Version 1 Baseline)
+# MEX-MARKDOWN-1: Markdown Core Feature Dictionary
 
 ## Abstract
 This document is the first functional feature increment of Markup Extensions (MEX) on the Markdown base. It inherits, in full, the architecture, four lineage laws, adoption governance, compliance model, and file format defined in MEX-CORE, and the Markdown base binding and External Base Lock defined in MEX-MARKDOWN-0. It adds the version-1 token dictionary.
