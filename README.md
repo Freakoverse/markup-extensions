@@ -12,7 +12,6 @@ The base language is a parameter, not a fixed choice: Markdown today, djot or an
 | [MEX-0.md](MEX-0.md) | Markdown profile genesis. Binds `base = markdown` to CommonMark 0.31.2 + GFM 0.29, states the Markdown External Base Lock, and holds the Layer 1 reference. Defines no tokens. Descends from MEX-CORE. |
 | [MEX-1.md](MEX-1.md) | Markdown version-1 token dictionary (the actual tokens). Descends from MEX-0. |
 | [mex-hash.mjs](mex-hash.mjs) | Reference canonicalizer / hasher. Computes a file's `file_sha256` over its canonicalized signed region. |
-| [../NIP-MEX.md](../NIP-MEX.md) | Nostr transport binding: how an event advertises its MEX baseline via the `mex` tag. |
 
 A future base would be added as a sibling lineage, for example `MEX-DJOT-0.md` (binding) and `MEX-DJOT-1.md` (dictionary), also descending from MEX-CORE. Nothing in the core or the Markdown branch changes.
 
@@ -30,7 +29,7 @@ Five required fields, carried in the host format's native comment/metadata facil
 - `hash` the targeted spec file's `file_sha256`; this is what selects the exact dictionary.
 - `signature` the lineage author's signature of that hash (carried for redundancy).
 
-See MEX-CORE "Declaring MEX in a document" for the per-file-type forms, and NIP-MEX for the Nostr tag.
+See MEX-CORE "Declaring MEX in a document" for the per-file-type forms.
 
 ## The hash chain (self-verifying spec files)
 
