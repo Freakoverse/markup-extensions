@@ -2,10 +2,10 @@
 Author: npub1_MARKDOWN_V2_AUTHOR_PLACEHOLDER (replace with the version-2 author's npub before sealing)
 Base: markdown
 Previous version: 1
-Previous file_sha256: 66c2bcade7eb46806e21550c4613a1e968581a5621a20a8546a869b8068efc08
+Previous file_sha256: 3964c748f08e2df1c3c1cf8ccf7efe3a9d516f2ae9c2855675a570f084eecc4e
 Previous author signature: PENDING_MARKDOWN1_SIGNATURE (the MEX-MARKDOWN-1 author's signature of the hash above)
 
-# MEX-MARKDOWN-2: Layout Grid (Version 2)
+# MEX-MARKDOWN-2
 
 ## Abstract
 This document is the second feature increment of Markup Extensions (MEX) on the Markdown base. It inherits, in full, the architecture, four lineage laws, adoption governance, compliance model, file format, and Renderer safety rule defined in MEX-CORE; the Markdown base binding and External Base Lock defined in MEX-MARKDOWN-0; and the version-1 token dictionary defined in MEX-MARKDOWN-1. It adds one construct: the `{grid}` layout grid.
@@ -113,6 +113,6 @@ Cells auto-flow into three rows of two: (text, checklist), (image, link), (GFM t
 <!-- MEX-SIGNED-REGION-END -->
 
 <!-- MEX-SEAL
-file_sha256: e056f342adae334c375586f5a8adb9cd16213b15084f8ebfd5a97c0efd4a640f
+file_sha256: 937b71e24111372f9d95cbe045fdcb1a7d9e5ee02688755b2ef8ec564ee057f7
 signature: PENDING_SIGNATURE
 -->

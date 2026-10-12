@@ -30,7 +30,7 @@ Five required fields, carried in the host format's native comment/metadata facil
 - `hash` the targeted spec file's `file_sha256`; this is what selects the exact dictionary.
 - `signature` the lineage author's signature of that hash (carried for redundancy).
 
-See MEX-CORE "Declaring MEX in a document" for the per-file-type forms, and NIP-MEX for the Nostr tag.
+See MEX-CORE "Declaring MEX in a document" for the per-file-type forms.
 
 ## The hash chain (self-verifying spec files)
 

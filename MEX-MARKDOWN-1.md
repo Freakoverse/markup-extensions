@@ -2,10 +2,10 @@
 Author: npub1_MARKDOWN_V1_AUTHOR_PLACEHOLDER (replace with the version-1 author's npub before sealing)
 Base: markdown
 Previous version: 0
-Previous file_sha256: 1c0a6e1102e633401d999c9f52105793cfd8ea01bb967138166ef251e6c7a4f6
+Previous file_sha256: 0739bb39d4281ddaba346feb21351a1622dddf7abdafc0411ec9983cb2960bc5
 Previous author signature: PENDING_MARKDOWN0_SIGNATURE (the MEX-MARKDOWN-0 author's signature of the hash above)
 
-# MEX-MARKDOWN-1: Markdown Core Feature Dictionary (Version 1)
+# MEX-MARKDOWN-1
 
 ## Abstract
 This document is the first functional feature increment of Markup Extensions (MEX) on the Markdown base. It inherits, in full, the architecture, four lineage laws, adoption governance, compliance model, and file format defined in MEX-CORE, and the Markdown base binding and External Base Lock defined in MEX-MARKDOWN-0. It adds the version-1 token dictionary.
@@ -56,6 +56,6 @@ Renderers MUST sanitize output, escaping every token payload before it is emitte
 <!-- MEX-SIGNED-REGION-END -->
 
 <!-- MEX-SEAL
-file_sha256: 66c2bcade7eb46806e21550c4613a1e968581a5621a20a8546a869b8068efc08
+file_sha256: 3964c748f08e2df1c3c1cf8ccf7efe3a9d516f2ae9c2855675a570f084eecc4e
 signature: PENDING_SIGNATURE
 -->

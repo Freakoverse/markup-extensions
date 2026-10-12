@@ -1,7 +1,7 @@
 <!-- MEX-SIGNED-REGION-START -->
 Author: npub1_CORE_AUTHOR_PLACEHOLDER (replace with the core author's npub before sealing)
 
-# MEX-CORE: Markup Extensions, Base-Agnostic Core (Genesis)
+# MEX-CORE: Architecture
 
 ## Abstract
 Markup languages are the ubiquitous baseline for plain-text authoring, but they share two structural gaps: they have no versioning, and their syntax symbols are hardcoded. There is no sanctioned way to add new elements over time without risking breakage for older documents, and no audit trail for who defined what. The result is a fragmented field of mutually incompatible "flavors" with no shared lineage. In practice each application improvises its own tokens (one tool's `||spoiler||`, another's bespoke timestamp syntax) with no shared contract, no backward-safety guarantee, and no way for other software to render them without breaking. This document provides a single coherent, adoptable standard in their place.
@@ -9,6 +9,14 @@ Markup languages are the ubiquitous baseline for plain-text authoring, but they 
 This document defines **Markup Extensions (MEX)**: an additive, version-controlled, adoption-governed formatting layer that sits on top of a base markup language. MEX is a **Layer 2** that never modifies **Layer 1** (the base markup). L1 rules are left completely untouched; MEX only adds new, non-colliding tokens that L1 does not process.
 
 MEX is **base-agnostic**. The base language (L1) is a parameter, not a fixed choice: Markdown today, djot or another lightweight markup tomorrow. MEX-CORE is the genesis and the root of everything. It defines the architecture, the four lineage laws, the governance model, the file format, and the document declaration. It names no base and defines no tokens. Each base is bound by its own profile genesis (for example MEX-MARKDOWN-0 for Markdown), which descends from this core.
+
+## Spec files and versions
+Each specification file is named `MEX-<BASE>-<N>`, with one exception: this base-agnostic core, which is named `MEX-CORE`.
+
+- `<BASE>` is the base identifier in upper case (for example `MARKDOWN`), corresponding to the lower-case value a document carries in its `base` field (for example `markdown`).
+- `<N>` is the **version number** within that base's lineage. `-0` is the base-binding genesis (it binds the base and defines no tokens); `-1`, `-2`, and each successive file add tokens. The number in the file name is the same `version` a document declares (see Declaring MEX in a document).
+
+So `MEX-MARKDOWN-0` is the Markdown base binding, `MEX-MARKDOWN-1` is Markdown version 1, and a hypothetical `MEX-DJOT-1` would be djot version 1. The file name alone tells you the base and the version.
 
 ## Layered model
 - **Layer 1 (L1):** a base markup language. L1 is a parameter, chosen per lineage and fixed by that lineage's base profile. L1 rules are never touched by MEX.
@@ -139,7 +147,7 @@ JSON (`.json`), a reserved root key (JSON has no comments):
 }
 ```
 
-A transport binding MAY carry the same five fields in its own native structure instead of an embedded comment (see NIP-MEX for the Nostr tag form).
+A transport binding MAY carry the same five fields in its own native structure instead of an embedded comment.
 
 ## Two kinds of extensions
 MEX tokens fall into two categories, which later dictionaries should keep distinct:
@@ -153,6 +161,6 @@ A token's payload is **data, never markup**. A renderer MUST escape payload cont
 <!-- MEX-SIGNED-REGION-END -->
 
 <!-- MEX-SEAL
-file_sha256: 8e504ee05cd1c09cfbd391bde67a761694c63c8f08947f084a2d399bed6b47b5
+file_sha256: fcf705e9d59c4573b56f21417348e3268ab9fc1193dcf60df6880b74f120b1b7
 signature: PENDING_SIGNATURE
 -->

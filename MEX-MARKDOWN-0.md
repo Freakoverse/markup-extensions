@@ -2,16 +2,16 @@
 Author: npub1_MARKDOWN_PROFILE_AUTHOR_PLACEHOLDER (replace with the Markdown profile author's npub before sealing)
 Base: markdown
 Previous: MEX-CORE
-Previous file_sha256: 8e504ee05cd1c09cfbd391bde67a761694c63c8f08947f084a2d399bed6b47b5
+Previous file_sha256: fcf705e9d59c4573b56f21417348e3268ab9fc1193dcf60df6880b74f120b1b7
 Previous author signature: PENDING_CORE_SIGNATURE (the MEX-CORE author's signature of the hash above)
 
-# MEX-MARKDOWN-0: Markdown Profile for Markup Extensions (Base Genesis)
+# MEX-MARKDOWN-0: Base Binding
 
 ## Abstract
 This document is the **Markdown profile genesis** for Markup Extensions (MEX). It inherits, in full, the architecture, four lineage laws, adoption governance, compliance model, and file format defined in MEX-CORE. It does one job: bind the `markdown` base to a concrete Layer 1, state the Markdown-specific External Base Lock, and provide the Layer 1 reference. It defines no tokens; the first Markdown token dictionary is MEX-MARKDOWN-1.
 
 ## Base binding
-- **Base identifier:** `markdown`. This is the value carried in the `base` field of a document declaration and in the `mex` Nostr tag (see MEX-CORE, Declaring MEX in a document, and NIP-MEX).
+- **Base identifier:** `markdown`. This is the value carried in the `base` field of a document declaration (see MEX-CORE, Declaring MEX in a document).
 - **Layer 1:** **CommonMark version 0.31.2** plus the **GitHub Flavored Markdown (GFM) version 0.29** extensions. This is the exact, immutable L1 that this Markdown lineage builds on. Later Markdown versions inherit this baseline unless a future version explicitly re-pins it, which, per the Internal Version Lock (MEX-CORE), is a new version, never an in-place change. Platform-specific rendering features outside those two specifications (for example GitHub's alert blocks, footnotes, or diagram fences) are not part of this baseline.
 
 ## External Base Lock (Markdown)
@@ -51,6 +51,6 @@ This is the concrete Layer 1 that the Markdown profile builds on and that Extern
 <!-- MEX-SIGNED-REGION-END -->
 
 <!-- MEX-SEAL
-file_sha256: 1c0a6e1102e633401d999c9f52105793cfd8ea01bb967138166ef251e6c7a4f6
+file_sha256: 0739bb39d4281ddaba346feb21351a1622dddf7abdafc0411ec9983cb2960bc5
 signature: PENDING_SIGNATURE
 -->
