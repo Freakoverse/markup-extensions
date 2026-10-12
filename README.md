@@ -18,10 +18,16 @@ Each base profile is named `MEX-<BASE>-N`: the genesis is `-0`, token dictionari
 
 ## How a document declares MEX
 
-Five required fields, carried in the host format's native comment/metadata facility or, on Nostr, in a tag:
+Five required fields, carried in the host format's native comment or metadata facility:
 
 ```
-["mex", "<base>", "<version>", "<lineage>", "<hash>", "<signature>"]
+[mex]
+base=<base>
+version=<version>
+lineage=<lineage>
+hash=<hash>
+signature=<signature>
+[/mex]
 ```
 
 - `base` dispatch discriminator (e.g. `markdown`); unsupported base degrades immediately.
